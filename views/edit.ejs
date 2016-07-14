@@ -1,0 +1,7 @@
+<h4> Edit the animal </h4>
+
+<form action="/animals/<%= animal.id%>" method="post">
+	Name:<input type="text" name="name" value="<%= animal.name%>"></input>
+	Age:<input type="text" name="age" value="<%= animal.age%>"></input>
+	<input type="submit" value="Update"></input>
+</form>

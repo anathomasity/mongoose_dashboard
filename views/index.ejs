@@ -1,0 +1,30 @@
+
+<h1>Animals</h1>
+
+	<table style="width:70%">
+		<tr>
+			<th>Name</th>
+			<th>Age</th> 
+			<th>Actions</th>
+		</tr>
+		<% for (animal in animals) {%>
+		<tr>
+			<td><%= animals[animal].name %></td>
+			<td><%= animals[animal].age %></td> 
+			<td><a href="/animals/<%= animals[animal].id %>">Show</a>
+			<a href="/animals/<%= animals[animal].id %>/edit">Edit</a>
+			<form action="/animals/<%= animals[animal].id%>/destroy" method="post">
+				<input type="submit" value="Destroy"></input>
+			</form></td>
+		</tr>
+	<% } %>
+	</table><br><br><br>
+	<a href="/animals/new">New animal</a>
+
+
+
+
+
+
+
+
